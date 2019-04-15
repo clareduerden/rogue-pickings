@@ -1,0 +1,131 @@
+/* Base styles ------------  */
+
+body  {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+#specials, #reviews, #contact {
+  height: 200px;
+}
+
+/* Grid abd Border-------------- */
+.full-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+.half-width {
+  width: 600px;
+  float: left;
+}
+.third-width {
+  width: 358px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+  padding:20px;
+  float: left;
+}
+#reviews {
+  border-left: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+}
+
+/* Header--------------  */
+header {
+  height: 540px;
+  padding: 20px 0;
+}
+h1 {
+  font-size: 30px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+h1 span {
+  color: #77a466;
+}
+header img {
+  margin-top: 20px;
+  border: solid 5px #77a466;
+}
+header nav {
+  float: right;
+  font-size: 14px;
+  line-height: 23px;
+  padding-top: 5px;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  padding-left: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #77a466;
+  font-weight: bold;
+}
+header h2 {
+  font-size: 18px;
+  line-height: 23px;
+  color: #77a466;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+header p {
+  font-size: 16px;
+  line-height: 25px;
+  /* padding-bottom: 20px; */
+}
+
+/* Main section------------ */
+.third-width h3 {
+  font-size: 12px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+#specials {
+  padding-left: 0px;
+}
+#specials ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#specials ul li {
+  padding-bottom: 20px;
+}
+#specials ul li a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #77a466;
+}
+#reviews p {
+  font-size: 16px;
+  line-height: 21px;
+}
+#contact p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Footer --------------- */
+footer {
+  height: 60px;
+  padding-top: 20px;
+  clear: both;
+}
+footer h3 {
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@font-face {
+  font-family: 'wisdom';
+  src: url('../fonts/wisdom.ttf');
+}
+footer h3 span {
+  font-family: 'wisdom';
+  color: #77a466;
+  text-transform: lowercase;
+  font-style: italic;
+  font-weight: normal;
+}
