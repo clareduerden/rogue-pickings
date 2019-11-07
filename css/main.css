@@ -1,5 +1,8 @@
 /* Base styles ------------  */
-
+@font-face {
+  font-family: 'wisdom';
+  src: url('../fonts/wisdom.ttf');
+}
 body  {
   font-family: 'Montserrat', sans-serif;
   color: black;
@@ -117,10 +120,6 @@ footer h3 {
   line-height: 23px;
   text-align: center;
   text-transform: uppercase;
-}
-@font-face {
-  font-family: 'wisdom';
-  src: url('../fonts/wisdom.ttf');
 }
 footer h3 span {
   font-family: 'wisdom';
