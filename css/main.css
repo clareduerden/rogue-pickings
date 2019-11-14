@@ -6,97 +6,112 @@
 body  {
   font-family: 'Montserrat', sans-serif;
   color: black;
-}
-#specials, #reviews, #contact {
-  height: 200px;
-}
-
-/* Grid abd Border-------------- */
-.full-width {
-  width: 1200px;
-  margin: 0 auto;
-}
-.half-width {
-  width: 600px;
-  float: left;
-}
-.third-width {
-  width: 358px;
-  border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
-  padding:20px;
-  float: left;
-}
-#reviews {
-  border-left: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
+  /* turn on flexbox - centers the container in the body */
+  display: flex;
+  justify-content: center;
+  /* Create default font-size for site to be 1em */
+  font-size: 16px;
 }
 
-/* Header--------------  */
+/* ------ MOBILE FIRST LAYOUT ---------- */
+
+/* create a flexbox container to hold everything on page and ensure everything can wrap */
+.container {
+  max-width: 1200px;
+  /* width of 90% keeps space at either side as the screen size gets smaller */
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+/* Make all the sections 100% width */
+header,
+footer,
+.top-section,
+.bottom-section {
+  width 100%;
+}
+
+/* ------ HEADER - Mobile First layout -------------- */
+/* Need to wrap header items  */
 header {
-  height: 540px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
   padding: 20px 0;
 }
 h1 {
-  font-size: 30px;
-  line-height: 23px;
+  width: 100%;
+  font-size: 2em;
+  line-height: 1.5em;
   text-transform: uppercase;
+  text-align: center;
 }
 h1 span {
   color: #77a466;
 }
-header img {
-  margin-top: 20px;
-  border: solid 5px #77a466;
-}
 header nav {
-  float: right;
-  font-size: 14px;
-  line-height: 23px;
-  padding-top: 5px;
+  line-height: 3em;
+}
+/* Remove default padding from the ul */
+nav ul {
+  padding: 0;
 }
 nav ul li {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 nav ul li a {
-  padding-left: 20px;
   text-decoration: none;
   text-transform: uppercase;
   color: #77a466;
   font-weight: bold;
 }
-header h2 {
-  font-size: 18px;
-  line-height: 23px;
+
+/* ------ TOP SECTION - Mobile First layout -------------- */
+
+.top-section img {
+  /* Make img fluid with a % width */
+  width: 100%;
+  border: solid 3px #77a466;
+}
+.top-section h2 {
+  line-height: 1.5em;
   color: #77a466;
   text-transform: uppercase;
   padding-top: 10px;
 }
-header p {
-  font-size: 16px;
-  line-height: 25px;
-  /* padding-bottom: 20px; */
+.top-section p {
+  line-height: 1.5em;
+  padding-bottom: 20px;
 }
 
-/* Main section------------ */
-.third-width h3 {
-  font-size: 12px;
-  line-height: 25px;
-  text-transform: uppercase;
+/* ------ BOTTOM SECTION - Mobile First Layout ------------ */
+.bottom-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-#specials {
-  padding-left: 0px;
+.box-one,
+.box-two,
+.box-three {
+  width: 100%;
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+}
+.bottom-section h3 {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 #specials ul {
   list-style-type: none;
   padding-left: 0;
 }
-#specials ul li {
-  padding-bottom: 20px;
-}
 #specials ul li a {
-  font-size: 16px;
-  line-height: 18px;
+  line-height: 2em;
   text-decoration: none;
   color: #77a466;
 }
@@ -113,7 +128,6 @@ header p {
 footer {
   height: 60px;
   padding-top: 20px;
-  clear: both;
 }
 footer h3 {
   font-size: 16px;
@@ -127,4 +141,36 @@ footer h3 span {
   text-transform: lowercase;
   font-style: italic;
   font-weight: normal;
+}
+
+
+/*  INSERT MEDIA QUERIES FOR TABLET AND DESKTOP HERE */
+
+@media (min-width: 768px) {
+
+  /* Make the widths of the 3 boxes just 30% on desktop view */
+  .box-one,
+  .box-two,
+  .box-three {
+    width: 33%;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  /* NEED TO FIND OUT - HOW TO DEAL WITH PADDING - if I apply padding it goes wrong on tablet size??? */
+  #reviews,
+  #contact {
+    /* padding-left: 10px; */
+  }
+
+  #reviews {
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+/* NEED TO APPLY FLEXBOX TO THE HEADER SECTION AND NAV HERE */
+
 }
