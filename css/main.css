@@ -30,7 +30,7 @@ header,
 footer,
 .top-section,
 .bottom-section {
-  width 100%;
+  width: 100%;
 }
 
 /* ------ HEADER - Mobile First layout -------------- */
@@ -39,30 +39,31 @@ header {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  padding: 20px 0;
+  padding: 1em 0;
 }
-h1 {
+header h1 {
   width: 100%;
   font-size: 2em;
-  line-height: 1.5em;
+  line-height: 2;
   text-transform: uppercase;
   text-align: center;
+  border-bottom: solid 2px #77a466;
 }
 h1 span {
   color: #77a466;
 }
 header nav {
-  line-height: 3em;
+  line-height: 2;
 }
 /* Remove default padding from the ul */
-nav ul {
+header nav ul {
   padding: 0;
 }
-nav ul li {
+header nav ul li {
   display: flex;
   justify-content: center;
 }
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   text-transform: uppercase;
   color: #77a466;
@@ -74,16 +75,16 @@ nav ul li a {
 .top-section img {
   /* Make img fluid with a % width */
   width: 100%;
-  border: solid 3px #77a466;
+  border: solid 2px #77a466;
 }
 .top-section h2 {
-  line-height: 1.5em;
+  line-height: 1.5;
   color: #77a466;
   text-transform: uppercase;
   padding-top: 10px;
 }
 .top-section p {
-  line-height: 1.5em;
+  line-height: 1.5;
   padding-bottom: 20px;
 }
 
@@ -126,12 +127,10 @@ nav ul li a {
 
 /* Footer --------------- */
 footer {
-  height: 60px;
-  padding-top: 20px;
+  padding: 1.5em;
 }
 footer h3 {
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 0.95em;
   text-align: center;
   text-transform: uppercase;
 }
@@ -148,29 +147,46 @@ footer h3 span {
 
 @media (min-width: 768px) {
 
+  body {
+    /* font-size: 1.2em; */
+  }
   /* Make the widths of the 3 boxes just 30% on desktop view */
   .box-one,
   .box-two,
   .box-three {
-    width: 33%;
+    width: 30%;
     border-bottom: 1px solid lightgrey;
+    flex-grow: 1;
   }
-
   /* NEED TO FIND OUT - HOW TO DEAL WITH PADDING - if I apply padding it goes wrong on tablet size??? */
   #reviews,
   #contact {
-    /* padding-left: 10px; */
+    padding-left: 1em;
   }
-
   #reviews {
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
+    padding-right: 1em;
   }
-
 }
 
 @media (min-width: 1200px) {
 
-/* NEED TO APPLY FLEXBOX TO THE HEADER SECTION AND NAV HERE */
-
+  /* Apply flexbox formatting to the Header, h1 and nav area for desktop layout */
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    width: 30%;
+    text-align: left;
+    border-bottom: none;
+  }
+  nav {
+    width: 40%;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
